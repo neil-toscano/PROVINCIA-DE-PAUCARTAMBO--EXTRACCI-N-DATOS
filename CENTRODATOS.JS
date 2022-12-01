@@ -129,7 +129,7 @@ const runCrawler = async () => {
                 
                 await delay(500)
                 console.log("la longitud es",pueblos.length);
-                // for (let i = 1; i < pueblos.length + 1; i++) {
+                // for (let i = 1; i < pueblos.length + 1; i++) {}
                 for (let i = 1; i<10; i++) {
                     
                     console.log(`${provincia.provincia} => ${distrito.distrito} => ${pueblos[i - 1]}`)
@@ -174,7 +174,7 @@ const runCrawler = async () => {
     try {
         const pueblosTotales = await runCrawler()
         // Escribir un archivo json
-        fs.writeFileSync('resultadoFinal.json', JSON.stringify(pueblosTotales))
+        fs.writeFileSync('PAUCARTAMBO.json', JSON.stringify(pueblosTotales))
     } catch (e) {
         console.log(e)
     }
